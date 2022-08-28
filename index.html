@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Beer Bank</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <button id="adv_filter" class="fixed_button">FILTER</button>
+        <button id="home" class="fixed_button">HOME</button>
+        <button id="fav_btn" class="fixed_button">FAVORITE</button>
+      </div>
+      <div class="pagecontent">
+        <div class="header">
+          <h1>Beer Bank</h1>
+          <h2>Find your favorite beer</h2>
+          <input
+            type="text"
+            placeholder=" Search for your beer ..."
+            id="input"
+          />
+          <p id="empty_input"></p>
+          <button id="search_beer">Search</button>
+        </div>
+        <div id="content"></div>
+      </div>
+    </div>
+    <div class="favorite" id="fav_modal">
+      <p class="title">FAVORITES</p>
+      <div id="beers"></div>
+    </div>
+
+    <div class="filter" id="filter_modal">
+      <p class="title">FILTER</p>
+      <div>
+        <select id="ibu">
+          <option value="">Select IBU</option>
+          <option value="ibu_lt">IBU Lower than</option>
+          <option value="ibu_gt">IBU Higher than</option>
+        </select>
+        <input
+          id="ibu_value"
+          type="number"
+          placeholder="Enter the number of IBU"
+        />
+      </div>
+      <div>
+        <select id="abv">
+          <option value="">Select ABV</option>
+          <option value="abv_lt">ABV Lower than</option>
+          <option value="abv_gt">ABV Higher than</option>
+        </select>
+        <input
+          id="abv_value"
+          type="number"
+          placeholder="Enter the number of ABV"
+        />
+      </div>
+      <div>
+        <select id="ebc">
+          <option value="">Select EBC</option>
+          <option value="ebc_lt">EBC Lower than</option>
+          <option value="ebc_gt">EBC Higher than</option>
+        </select>
+        <input
+          id="ebc_value"
+          type="number"
+          placeholder="Enter the number of EBC"
+        />
+      </div>
+      <div>
+        <select id="data">
+          <option value="">Select Date</option>
+          <option value="brewed_before">Brewed Before</option>
+          <option value="brewed_after">Brewed After</option>
+        </select>
+        <input
+          id="data_value"
+          type="text"
+          placeholder="Enter Date e.g. 10-2011"
+        />
+      </div>
+      <button id="find">FIND</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

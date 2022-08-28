@@ -1,0 +1,353 @@
+body {
+  margin: 0;
+  background-color: lightgrey;
+}
+
+.container {
+  display: flex;
+}
+
+.row {
+  width: 100%;
+  position: fixed;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  background: linear-gradient(to right, #0d0a00, #1e1b08);
+  box-sizing: border-box;
+  padding: 10px 20px;
+  z-index: 1;
+  opacity: 0.9;
+}
+
+.fixed_button {
+  background-color: transparent;
+  color: white;
+  border: 0px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.pagecontent {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.pagecontent h1 {
+  color: #2c340f;
+  font-size: 50px;
+}
+
+.pagecontent h2 {
+  color: #2c340f;
+  font-size: 18px;
+}
+
+.header {
+  padding: 40px 0 30px 0;
+  padding-bottom: 30px;
+  background: linear-gradient(to right, #d0ab06, #a98b05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+h1 {
+  margin-bottom: 0;
+  margin-top: 40px;
+}
+
+#input {
+  width: 30%;
+  height: 40px;
+  font-size: 18px;
+  border-radius: 5px;
+  border: 1px solid rgb(169, 153, 153);
+}
+
+#input:focus {
+  outline: none;
+}
+
+#empty_input {
+  color: red;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+#search_beer {
+  width: 100px;
+  height: 30px;
+  border-radius: 3px;
+  font-size: 14px;
+  border: none;
+  background-color: aliceblue;
+}
+
+.favorite {
+  top: 17%;
+  right: 2px;
+  position: fixed;
+  align-items: center;
+  display: none;
+  flex-direction: column;
+  width: 20%;
+  height: 72vh;
+  background-color: #000204;
+  z-index: 10;
+  opacity: 0.8;
+}
+
+.favorite:hover,
+.filter:hover {
+  opacity: 1;
+}
+
+.title {
+  position: fixed;
+  color: azure;
+  margin: 10px auto;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+#beers {
+  margin-top: 40px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  overflow-y: auto;
+  width: 90%;
+}
+
+.beer_in_fav {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #000204;
+  margin: 10px auto;
+}
+
+.beer_in_fav:hover {
+  background-color: rgb(243, 236, 236);
+}
+
+.filter {
+  top: 18%;
+  left: 2px;
+  gap: 10px;
+  position: fixed;
+  align-items: center;
+  width: 20%;
+  height: 70vh;
+  background-color: #000204;
+  display: none;
+  z-index: 10;
+  opacity: 0.8;
+  overflow-y: auto;
+  flex-direction: column;
+}
+
+.filter div {
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.filter select {
+  align-items: center;
+  width: 80%;
+  height: 30px;
+  outline: none;
+}
+
+.filter input {
+  width: 78%;
+  height: 25px;
+  outline: none;
+}
+
+#find {
+  margin-top: 20px;
+  height: 30px;
+  width: 50%;
+}
+
+#content {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20%;
+  gap: 30px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 300px;
+  padding: 20px;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  height: 450px;
+}
+
+.card .description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card:hover {
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
+.star {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  padding: 20px;
+  font-size: 20px;
+}
+
+.star:hover {
+  stroke-width: 100;
+  cursor: pointer;
+}
+
+.img {
+  height: 200px;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.beerhearder {
+  color: #f1c91a;
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.description {
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.modal_box {
+  position: fixed;
+  top: 7%;
+  left: auto;
+  width: 620px;
+  height: 850px;
+  border: 1px solid black;
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: red;
+}
+
+.upper_part {
+  display: flex;
+  width: 100%;
+  height: 70%;
+}
+
+img {
+  height: 80%;
+  width: 30%;
+  margin: 10% 30px 10% 30px;
+}
+
+.bottom_part {
+  width: 100%;
+  height: 30%;
+}
+
+.bottom_part h1 {
+  color: orange;
+  font-weight: 600;
+  font-size: 30px;
+  padding-left: 30%;
+  margin-bottom: 10px;
+}
+
+.left {
+  margin-top: 10%;
+  padding: 2px;
+}
+.left h1 {
+  margin: 0;
+  color: orange;
+  font-weight: 600;
+  font-size: 35px;
+}
+.left h3 {
+  margin-top: 10px;
+  font-weight: 500;
+  color: #353232;
+  font-size: 25px;
+}
+
+.alco {
+  display: flex;
+  gap: 15px;
+  font-size: 20px;
+  color: #353232;
+}
+
+.left p,
+ul {
+  font-size: 18px;
+  color: #353232;
+}
+
+.suggestions {
+  display: flex;
+  gap: 50px;
+}
+
+.suggestions img {
+  width: fit-content;
+  cursor: pointer;
+}
+
+.parts {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  height: 150px;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  border: 1px solid rgba(50, 50, 93, 0.25);
+
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(0, 0, 0, 0.3) 0px -2px 6px 0px inset;
+}
